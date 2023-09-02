@@ -1,0 +1,37 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0; 
+    border: none
+}
+
+:root{
+    --main-color: #10b981;
+    --background-color: #ecfdf5;
+}
+
+/*/////////// General layout */
+body{
+    display: grid;
+    grid-template-columns: 15% 1fr;
+    grid-template-rows: 20% 1fr;
+    height: 100vh;
+}
+/* /////////Header */
+header {
+
+}
+
+/* /////////  Nav */
+    /* layout */
+nav{ 
+    grid-row: 1 / span 2;
+    display: grid;
+    grid-template-rows: 20% 1fr 20%;
+    padding: 20px;
+}
+
+    /* styling */
+nav{
+    background-color: var(--main-color);
+}
