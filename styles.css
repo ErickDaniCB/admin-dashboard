@@ -1,4 +1,5 @@
 * {
+    font-size: 20px;
     box-sizing: border-box;
     margin: 0;
     padding: 0; 
@@ -16,6 +17,7 @@ body{
     grid-template-columns: 15% 1fr;
     grid-template-rows: 20% 1fr;
     height: 100vh;
+    background-color: var(--background-color);
 }
 /* /////////Header */
 header {
@@ -28,10 +30,62 @@ nav{
     grid-row: 1 / span 2;
     display: grid;
     grid-template-rows: 20% 1fr 20%;
+    background-color: var(--main-color);
+}
+
+    /* Logo Stuff */
+
+#div-logo {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     padding: 20px;
 }
 
-    /* styling */
-nav{
-    background-color: var(--main-color);
+#logo {
+    width: 100%;
+    justify-self: end;
+}
+
+#h1-logo {
+    text-align: left;
+    font-size: 1.9rem;
+}
+
+    /* NAV MAIN */
+
+.nav-section { 
+    display: grid;
+    grid-auto-rows: 3.5rem;
+    justify-items: start;
+    padding-left: 15px;
+}
+
+.nav-button{
+    position: relative;
+    padding-left: 20px;
+    width: 100%;
+    height: 80%;
+    text-align: start;
+    border-radius: 7px 0 0 7px;
+    background-size: 200% 200%;
+    transition: 0.3s;
+    background-image:linear-gradient(to left,var(--background-color) 50%, var(--main-color) 0);
+    background-position: left;
+}
+
+.nav-button:hover {
+    cursor: pointer;
+    background-position: right;
+}
+
+.nav-button svg {
+    width: 1rem;
+    height: 1rem;
+    position: relative;
+    top: 3px;
+}
+
+#supp-actions{
+    grid-auto-rows: 2.2rem;
+    align-self: end;
 }
