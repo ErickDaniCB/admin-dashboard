@@ -8,7 +8,7 @@
 }
 
 :root{
-    --main-color: #10b981;
+    --main-color: #3bc194;
     --background-color: #e1f7ec;
 }
 
@@ -23,6 +23,9 @@ body{
     background-color: var(--background-color);
 }
 
+h3 {
+    font-size: 16px;
+}
 
 /* /////////Header */
 
@@ -39,14 +42,21 @@ header {
     align-items: center;
 }
 
-#greeting img {
+.profile-pic {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+#greeting .profile-pic{
+    margin-right: 20px;
+    grid-row: 1 / span 2;
     width: 70px;
     height: 70px;
-    object-fit: cover;
-    grid-row: 1 / span 2;
-    border-radius: 50%;
-    margin-right: 20px;
 }
+
+
 
 #header-buttons {
     display: grid;
@@ -147,7 +157,94 @@ nav{
 
 /* ///////// CONTENT/CARDS */
 
+#content {
+    display: grid;
+    grid-template-columns: 1fr 25%;
+}
 
+/* LEFT SECTION */
 
-/* YOUR PROJECTS SECTION */
+#content-left {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    padding: 20px
+}
+
+#content-left > h1 , #content-right > h1{
+    margin: 0 0 20px 15px;
+}
+
+#your-projects {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 1rem;
+    padding: 20px;
+    height: 100%;
+    display: grid;
+}
+
+.card.left {
+    grid-template-rows: auto 1fr auto;
+}
+
+.card p {
+    font-size: 0.7rem;
+    color: rgb(67, 66, 66);
+}
+
+.card h1 {
+    margin-bottom: 15px;
+}
+
+.card .svgs{
+    justify-self: end;
+    align-self: flex-end;
+}
+
+.card-action {
+    width: 1.3rem;
+    height: 1.3rem;
+    border-radius: 50%;
+    position: relative;
+    background-color: var(--background-color);
+}
+
+.card-action svg {
+    height: 1rem;
+    margin-right: 0.5rem;
+    position: relative;
+    top: 3px;
+    left: 2px;
+}
+
+/* RIGHT  SECTION */
+
+#content-right {
+    display: grid;
+    grid-template-rows: auto 1fr calc(1rem + 40px) 1fr;
+    padding: 20px 20px 20px 0;
+}
+
+.card hr {
+    width: 100%;
+    height: 0;
+    border: 1px solid rgb(216, 215, 215);
+    margin: 10px 0 10px 0;
+}
+
+.margin {
+    align-self: flex-end;
+}
+
+.user {
+    display: grid;
+
+}
+
 
