@@ -13,7 +13,7 @@
 }
 
 
-/*/////////// General layout */
+/*/////////// GENERAL  */
 
 body{
     display: grid;
@@ -25,9 +25,11 @@ body{
 
 h3 {
     font-size: 16px;
+    margin-bottom: 5px;
 }
 
-/* /////////Header */
+
+/* /////////HEADER */
 
 header {
     display: grid;
@@ -37,9 +39,16 @@ header {
 
 #greeting{
     display: grid;
-    grid-template: repeat(2, 1fr) / auto 1fr;
+    grid-template: repeat(2, 1fr) / auto auto 1fr;
     padding: 20px 0 0 20px;
     align-items: center;
+}
+
+#greeting svg {
+    height: 1.5rem;
+    grid-row: 1/span 2;
+    grid-column: 3;
+    margin-left: 20px;
 }
 
 .profile-pic {
@@ -56,7 +65,7 @@ header {
     height: 70px;
 }
 
-
+/* HEADER BUTTONS */
 
 #header-buttons {
     display: grid;
@@ -86,9 +95,7 @@ header {
 }
 
 
-/* /////////  Nav */
-
-    /* layout */
+/* /////////  NAV */
 
 nav{ 
     grid-row: 1 / span 2;
@@ -97,7 +104,7 @@ nav{
     background-color: var(--main-color);
 }
 
-    /* Logo Stuff */
+    /* LOGO */
 
 #div-logo {
     display: grid;
@@ -116,7 +123,7 @@ nav{
     font-size: 1.55rem;
 }
 
-    /* NAV MAIN */
+    /* NAV ACTIONS */
 
 .nav-section { 
     display: grid;
@@ -244,7 +251,10 @@ nav{
 
 .user {
     display: grid;
-
+    grid-template-columns: auto 1fr;
+    align-items: center;
 }
-
+ .user div {
+    margin-left: 5px;
+ }
 
